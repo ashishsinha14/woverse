@@ -8,9 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
   color: #444444;
+  /* background-color: rgba(46,106,255,.26)!important; */
 }
 
 a {
@@ -2668,6 +2672,14 @@ button:hover {
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px;
+  background-color: aliceblue;
+  border:"solid thin";
+}
+
+.parastyle {
+  font-style: italic;
+  font-family: monospace;
+  font-weight: 800
 }
 
 
@@ -2681,3 +2693,35 @@ button:hover {
   height: 100%; /* takes the 100 % height of its container (.box div)*/
   object-fit: cover;
 }
+
+
+/* Animation property */
+.shakingbutton {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
