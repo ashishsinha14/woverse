@@ -1598,7 +1598,7 @@ section {
   right: -30px;
   height: 200px;
   padding: 30px;
-  background-image: url('https://i.imgur.com/MRjF1PL.png?1');
+  background-image: url('/assets/img/MRjF1PL.png');
   background-position-x: 272%;
   background-position-y: -1px;
   background-repeat: no-repeat;
@@ -2149,7 +2149,7 @@ button:hover {
   right: -30px;
   height: 200px;
   padding: 30px;
-  background-image: url('https://i.imgur.com/MRjF1PL.png?1');
+  background-image: url('/assets/img/MRjF1PL.png');
   background-position-x: 272%;
   background-position-y: -1px;
   background-repeat: no-repeat;
