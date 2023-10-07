@@ -9,8 +9,9 @@
 # General
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: sans-serif;
   font-size: 15px;
   line-height: 1.7;
   color: #444444;
@@ -33,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -668,7 +669,7 @@ section {
 }
 
 .about .content .btn-learn-more {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -696,7 +697,7 @@ section {
 .services .icon-box {
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
-  background: #fefefe;
+  background: url("../img/bgcards.png") center / cover no-repeat fixed;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
   border-radius: 18px;
   border-bottom: 5px solid #fff;
@@ -765,7 +766,7 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -898,7 +899,7 @@ section {
 .counts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   color: #fff;
 }
@@ -1103,7 +1104,7 @@ section {
   font-size: 42px;
   color: #009961;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+  font-family: sans-serif;
   margin-bottom: 20px;
 }
 
@@ -1156,7 +1157,7 @@ section {
   color: #009961;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1250,7 +1251,7 @@ section {
 .faq .accordion-list a {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1513,7 +1514,7 @@ section {
   font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
@@ -1669,23 +1670,24 @@ section {
 
 
 
-.realistic-marker-highlight{
-  position:relative;
+.realistic-marker-highlight {
+  position: relative;
   color: #ffffff;
   font-family: Libre Franklin;
   font-weight: 500;
 }
-.realistic-marker-highlight:before{
-  content:"";
-  background-color:#ef8c22;
-  width:100%;
-  height:1.3em;
-  position:absolute;
-  z-index:-1;
-  filter:url(#marker-shape);
-  left:-0.25em;
-  top:-0.05em;
-  padding:0 0.30em;
+
+.realistic-marker-highlight:before {
+  content: "";
+  background-color: #ef8c22;
+  width: 100%;
+  height: 1.3em;
+  position: absolute;
+  z-index: -1;
+  filter: url(#marker-shape);
+  left: -0.25em;
+  top: -0.05em;
+  padding: 0 0.30em;
 }
 
 
@@ -1699,7 +1701,7 @@ section {
 }
 
 h1 {
-  text-align: center;  
+  text-align: center;
 }
 
 input {
@@ -1742,7 +1744,7 @@ button:hover {
   width: 15px;
   margin: 0 2px;
   background-color: lightsteelblue;
-  border: none;  
+  border: none;
   border-radius: 50%;
   display: inline-block;
   opacity: 0.5;
@@ -1761,15 +1763,18 @@ button:hover {
   font-weight: 700;
   color: darkcyan;
 }
+
 .question {
   font-size: x-large;
   color: darkgoldenrod;
   display: block;
   padding-bottom: 10px;
 }
+
 .capitalize {
   text-transform: uppercase;
 }
+
 .salutation {
   font-size: x-large;
   color: rebeccapurple;
@@ -1784,12 +1789,14 @@ button:hover {
   background-color: #fff;
   width: 500px;
   margin: 0 auto;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .2);
 }
+
 .survey-form .fields {
   position: relative;
   padding: 20px;
 }
+
 .survey-form select {
   appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #c7c9cb 50%), linear-gradient(135deg, #c7c9cb 50%, transparent 50%), linear-gradient(to right, #dfe0e0, #dfe0e0);
@@ -1797,14 +1804,17 @@ button:hover {
   background-size: 5px 5px, 5px 5px, 1px 25px;
   background-repeat: no-repeat;
 }
+
 .survey-form select option:first-child {
   display: none;
 }
+
 .survey-form input[type="date"]::-webkit-calendar-picker-indicator {
   color: #ddd;
   filter: invert(0.8);
 }
-.survey-form input[type="text"], 
+
+.survey-form input[type="text"],
 .survey-form input[type="email"],
 .survey-form input[type="date"],
 .survey-form input[type="tel"],
@@ -1817,21 +1827,24 @@ button:hover {
   flex-basis: 100%;
   height: 47px;
 }
-.survey-form input[type="text"]:focus, 
+
+.survey-form input[type="text"]:focus,
 .survey-form input[type="email"]:focus,
 .survey-form input[type="tel"]:focus,
 .survey-form input[type="date"]:focus,
 .survey-form select:focus {
   border: 1px solid #c6c7c7;
 }
-.survey-form input[type="text"]::placeholder, 
-.survey-form input[type="email"]::placeholder, 
-.survey-form input[type="tel"]::placeholder, 
-.survey-form input[type="date"]:invalid, 
+
+.survey-form input[type="text"]::placeholder,
+.survey-form input[type="email"]::placeholder,
+.survey-form input[type="tel"]::placeholder,
+.survey-form input[type="date"]:invalid,
 .survey-form textarea::placeholder,
 .survey-form select:invalid {
   color: #858688;
 }
+
 .survey-form textarea {
   resize: none;
   margin-top: 15px;
@@ -1840,13 +1853,16 @@ button:hover {
   width: 100%;
   height: 150px;
 }
+
 .survey-form textarea:focus {
   border: 1px solid #c6c7c7;
 }
+
 .survey-form .buttons {
   padding: 20px;
   border-top: 1px solid #eceff2;
 }
+
 .survey-form .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -1860,33 +1876,41 @@ button:hover {
   text-decoration: none;
   font-size: 14px;
 }
+
 .survey-form .btn:hover {
   background-color: #c26c4a;
 }
+
 .survey-form .btn.alt {
   background-color: transparent;
   border: 1px solid #c9704c;
   color: #c9704c;
 }
+
 .survey-form .btn.alt:hover {
   border: 1px solid #c26c4a;
-  color: #c26c4a;  
+  color: #c26c4a;
 }
+
 .survey-form input[name="email"] {
   position: relative;
   display: block;
 }
+
 .survey-form .field {
   display: inline-flex;
   position: relative;
   width: 100%;
   padding-bottom: 20px;
 }
-.survey-form label, .survey-form p {
+
+.survey-form label,
+.survey-form p {
   font-size: 14px;
   font-weight: 900;
   color: blueviolet;
 }
+
 .survey-form .field i {
   position: absolute;
   color: #dfe2e5;
@@ -1894,23 +1918,29 @@ button:hover {
   left: 15px;
   z-index: 10;
 }
-.survey-form .field i ~ input {
+
+.survey-form .field i~input {
   padding-left: 45px !important;
 }
+
 .survey-form .responses {
   padding: 15px;
   margin: 0;
 }
+
 .survey-form .fields .wrapper {
   display: flex;
   justify-content: space-between;
 }
-.survey-form .fields .wrapper > div {
+
+.survey-form .fields .wrapper>div {
   width: 100%;
 }
+
 .survey-form .fields .wrapper .gap {
   width: 35px;
 }
+
 .survey-form .steps {
   position: relative;
   display: flex;
@@ -1920,6 +1950,7 @@ button:hover {
   align-self: center;
   margin: 0 auto;
 }
+
 .survey-form .steps::before {
   content: "";
   position: absolute;
@@ -1933,34 +1964,39 @@ button:hover {
   bottom: 0;
   z-index: 0;
 }
+
 .survey-form .steps .step {
   width: 25px;
   height: 25px;
   background-color: #f2f4f7;
   border: 3px solid #f2f4f7;
   border-radius: 50px;
-  
+
   z-index: 1;
 }
+
 .survey-form .steps .step.current {
   background-color: #8cc6f2;
 }
+
 .survey-form .steps .step.complete {
   background-color: #6ECBA4;
 }
+
 .survey-form .rating {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
 }
+
 .survey-form .rating input[type="radio"]:checked,
 .survey-form .rating input[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-.survey-form .rating input[type="radio"]:checked + label,
-.survey-form .rating input[type="radio"]:not(:checked) + label
-{
+
+.survey-form .rating input[type="radio"]:checked+label,
+.survey-form .rating input[type="radio"]:not(:checked)+label {
   display: flex;
   position: relative;
   font-size: 14px;
@@ -1972,8 +2008,9 @@ button:hover {
   color: #8e939b;
   z-index: 10;
 }
-.survey-form .rating input[type="radio"]:checked + label:before,
-.survey-form .rating input[type="radio"]:not(:checked) + label:before {
+
+.survey-form .rating input[type="radio"]:checked+label:before,
+.survey-form .rating input[type="radio"]:not(:checked)+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1985,8 +2022,9 @@ button:hover {
   background: #fff;
   z-index: -1;
 }
-.survey-form .rating input[type="radio"]:checked + label:after,
-.survey-form .rating input[type="radio"]:not(:checked) + label:after {
+
+.survey-form .rating input[type="radio"]:checked+label:after,
+.survey-form .rating input[type="radio"]:not(:checked)+label:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1997,28 +2035,34 @@ button:hover {
   background: #c9704c;
   z-index: -1;
 }
-.survey-form .rating input[type="radio"]:not(:checked) + label:after {
+
+.survey-form .rating input[type="radio"]:not(:checked)+label:after {
   opacity: 0;
 }
-.survey-form .rating input[type="radio"]:checked + label {
+
+.survey-form .rating input[type="radio"]:checked+label {
   color: #fff;
 }
-.survey-form .rating input[type="radio"]:checked + label:after {
+
+.survey-form .rating input[type="radio"]:checked+label:after {
   opacity: 1;
 }
+
 .survey-form .rating-footer {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   color: #8e939b;
-  padding: 15px 0 25px;      
+  padding: 15px 0 25px;
 }
+
 .survey-form .group {
   display: flex;
   flex-flow: column;
   justify-content: center;
   padding-bottom: 15px;
 }
+
 .survey-form .group label {
   display: flex;
   font-weight: 500;
@@ -2026,6 +2070,7 @@ button:hover {
   align-items: center;
   padding-bottom: 5px;
 }
+
 .survey-form .group input[type="radio"],
 .survey-form .group input[type="checkbox"] {
   appearance: none;
@@ -2040,30 +2085,38 @@ button:hover {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .survey-form .group input[type="radio"]:hover,
 .survey-form .group input[type="checkbox"]:hover {
   border: 1px solid #d2d3d3;
 }
+
 .survey-form .group input[type="radio"]:checked,
 .survey-form .group input[type="checkbox"]:checked {
   border: 1px solid #d2d3d3;
   background-color: #2996ed;
 }
+
 .survey-form .group input[type="checkbox"] {
   border-radius: 0;
 }
+
 .survey-form .step-content {
   display: none;
 }
+
 .survey-form .step-content.current {
   display: block;
 }
+
 .survey-form .result {
   padding: 25px;
 }
+
 .survey-form .result h3 {
   color: #6a737f;
 }
+
 .survey-form .result p {
   font-weight: 500;
 }
@@ -2083,7 +2136,7 @@ button:hover {
 .rb {
   padding: 32px 0;
   text-align: center;
-  background: rgba(255,255,255,.03);
+  background: rgba(255, 255, 255, .03);
   border-radius: .3em;
 }
 
@@ -2119,7 +2172,7 @@ button:hover {
 
 .rb-tab-active .rb-spot {
   background: plum;
-  border: 2px solid rgba(243,49,128,.6);
+  border: 2px solid rgba(243, 49, 128, .6);
 }
 
 .parent-wrapper {
@@ -2220,28 +2273,29 @@ button:hover {
 
 
 
-.realistic-marker-highlight{
-  position:relative;
+.realistic-marker-highlight {
+  position: relative;
   color: #ffffff;
   font-family: Libre Franklin;
   font-weight: 500;
 }
-.realistic-marker-highlight:before{
-  content:"";
-  background-color:#ef8c22;
-  width:100%;
-  height:1.3em;
-  position:absolute;
-  z-index:-1;
-  filter:url(#marker-shape);
-  left:-0.25em;
-  top:-0.05em;
-  padding:0 0.30em;
+
+.realistic-marker-highlight:before {
+  content: "";
+  background-color: #ef8c22;
+  width: 100%;
+  height: 1.3em;
+  position: absolute;
+  z-index: -1;
+  filter: url(#marker-shape);
+  left: -0.25em;
+  top: -0.05em;
+  padding: 0 0.30em;
 }
 
 
 h1 {
-  text-align: center;  
+  text-align: center;
 }
 
 input {
@@ -2284,7 +2338,7 @@ button:hover {
   width: 15px;
   margin: 0 2px;
   background-color: lightsteelblue;
-  border: none;  
+  border: none;
   border-radius: 50%;
   display: inline-block;
   opacity: 0.5;
@@ -2303,6 +2357,7 @@ button:hover {
   font-weight: 700;
   color: darkcyan;
 }
+
 .question {
   font-size: x-large;
   color: darkgoldenrod;
@@ -2311,9 +2366,11 @@ button:hover {
   text-align: center;
   font-weight: 700;
 }
+
 .capitalize {
   text-transform: uppercase;
 }
+
 .salutation {
   font-size: x-large;
   color: rebeccapurple;
@@ -2328,12 +2385,14 @@ button:hover {
   background-color: #fff;
   width: 500px;
   margin: 0 auto;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .2);
 }
+
 .survey-form .fields {
   position: relative;
   padding: 20px;
 }
+
 .survey-form select {
   appearance: none;
   background-image: linear-gradient(45deg, transparent 50%, #c7c9cb 50%), linear-gradient(135deg, #c7c9cb 50%, transparent 50%), linear-gradient(to right, #dfe0e0, #dfe0e0);
@@ -2341,14 +2400,17 @@ button:hover {
   background-size: 5px 5px, 5px 5px, 1px 25px;
   background-repeat: no-repeat;
 }
+
 .survey-form select option:first-child {
   display: none;
 }
+
 .survey-form input[type="date"]::-webkit-calendar-picker-indicator {
   color: #ddd;
   filter: invert(0.8);
 }
-.survey-form input[type="text"], 
+
+.survey-form input[type="text"],
 .survey-form input[type="email"],
 .survey-form input[type="date"],
 .survey-form input[type="tel"],
@@ -2361,21 +2423,24 @@ button:hover {
   flex-basis: 100%;
   height: 47px;
 }
-.survey-form input[type="text"]:focus, 
+
+.survey-form input[type="text"]:focus,
 .survey-form input[type="email"]:focus,
 .survey-form input[type="tel"]:focus,
 .survey-form input[type="date"]:focus,
 .survey-form select:focus {
   border: 1px solid #c6c7c7;
 }
-.survey-form input[type="text"]::placeholder, 
-.survey-form input[type="email"]::placeholder, 
-.survey-form input[type="tel"]::placeholder, 
-.survey-form input[type="date"]:invalid, 
+
+.survey-form input[type="text"]::placeholder,
+.survey-form input[type="email"]::placeholder,
+.survey-form input[type="tel"]::placeholder,
+.survey-form input[type="date"]:invalid,
 .survey-form textarea::placeholder,
 .survey-form select:invalid {
   color: #858688;
 }
+
 .survey-form textarea {
   resize: none;
   margin-top: 15px;
@@ -2384,13 +2449,16 @@ button:hover {
   width: 100%;
   height: 150px;
 }
+
 .survey-form textarea:focus {
   border: 1px solid #c6c7c7;
 }
+
 .survey-form .buttons {
   padding: 20px;
   border-top: 1px solid #eceff2;
 }
+
 .survey-form .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -2404,33 +2472,41 @@ button:hover {
   text-decoration: none;
   font-size: 14px;
 }
+
 .survey-form .btn:hover {
   background-color: #c26c4a;
 }
+
 .survey-form .btn.alt {
   background-color: transparent;
   border: 1px solid #c9704c;
   color: #c9704c;
 }
+
 .survey-form .btn.alt:hover {
   border: 1px solid #c26c4a;
-  color: #c26c4a;  
+  color: #c26c4a;
 }
+
 .survey-form input[name="email"] {
   position: relative;
   display: block;
 }
+
 .survey-form .field {
   display: inline-flex;
   position: relative;
   width: 100%;
   padding-bottom: 20px;
 }
-.survey-form label, .survey-form p {
+
+.survey-form label,
+.survey-form p {
   font-size: 14px;
   font-weight: 900;
   color: blueviolet;
 }
+
 .survey-form .field i {
   position: absolute;
   color: #dfe2e5;
@@ -2438,23 +2514,29 @@ button:hover {
   left: 15px;
   z-index: 10;
 }
-.survey-form .field i ~ input {
+
+.survey-form .field i~input {
   padding-left: 45px !important;
 }
+
 .survey-form .responses {
   padding: 15px;
   margin: 0;
 }
+
 .survey-form .fields .wrapper {
   display: flex;
   justify-content: space-between;
 }
-.survey-form .fields .wrapper > div {
+
+.survey-form .fields .wrapper>div {
   width: 100%;
 }
+
 .survey-form .fields .wrapper .gap {
   width: 35px;
 }
+
 .survey-form .steps {
   position: relative;
   display: flex;
@@ -2464,6 +2546,7 @@ button:hover {
   align-self: center;
   margin: 0 auto;
 }
+
 .survey-form .steps::before {
   content: "";
   position: absolute;
@@ -2477,34 +2560,39 @@ button:hover {
   bottom: 0;
   z-index: 0;
 }
+
 .survey-form .steps .step {
   width: 25px;
   height: 25px;
   background-color: #f2f4f7;
   border: 3px solid #f2f4f7;
   border-radius: 50px;
-  
+
   z-index: 1;
 }
+
 .survey-form .steps .step.current {
   background-color: #8cc6f2;
 }
+
 .survey-form .steps .step.complete {
   background-color: #6ECBA4;
 }
+
 .survey-form .rating {
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
 }
+
 .survey-form .rating input[type="radio"]:checked,
 .survey-form .rating input[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-.survey-form .rating input[type="radio"]:checked + label,
-.survey-form .rating input[type="radio"]:not(:checked) + label
-{
+
+.survey-form .rating input[type="radio"]:checked+label,
+.survey-form .rating input[type="radio"]:not(:checked)+label {
   display: flex;
   position: relative;
   font-size: 14px;
@@ -2516,8 +2604,9 @@ button:hover {
   color: #8e939b;
   z-index: 10;
 }
-.survey-form .rating input[type="radio"]:checked + label:before,
-.survey-form .rating input[type="radio"]:not(:checked) + label:before {
+
+.survey-form .rating input[type="radio"]:checked+label:before,
+.survey-form .rating input[type="radio"]:not(:checked)+label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -2529,8 +2618,9 @@ button:hover {
   background: #fff;
   z-index: -1;
 }
-.survey-form .rating input[type="radio"]:checked + label:after,
-.survey-form .rating input[type="radio"]:not(:checked) + label:after {
+
+.survey-form .rating input[type="radio"]:checked+label:after,
+.survey-form .rating input[type="radio"]:not(:checked)+label:after {
   content: "";
   position: absolute;
   top: 0;
@@ -2541,28 +2631,34 @@ button:hover {
   background: #c9704c;
   z-index: -1;
 }
-.survey-form .rating input[type="radio"]:not(:checked) + label:after {
+
+.survey-form .rating input[type="radio"]:not(:checked)+label:after {
   opacity: 0;
 }
-.survey-form .rating input[type="radio"]:checked + label {
+
+.survey-form .rating input[type="radio"]:checked+label {
   color: #fff;
 }
-.survey-form .rating input[type="radio"]:checked + label:after {
+
+.survey-form .rating input[type="radio"]:checked+label:after {
   opacity: 1;
 }
+
 .survey-form .rating-footer {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   color: #8e939b;
-  padding: 15px 0 25px;      
+  padding: 15px 0 25px;
 }
+
 .survey-form .group {
   display: flex;
   flex-flow: column;
   justify-content: center;
   padding-bottom: 15px;
 }
+
 .survey-form .group label {
   display: flex;
   font-weight: 500;
@@ -2570,6 +2666,7 @@ button:hover {
   align-items: center;
   padding-bottom: 5px;
 }
+
 .survey-form .group input[type="radio"],
 .survey-form .group input[type="checkbox"] {
   appearance: none;
@@ -2584,30 +2681,38 @@ button:hover {
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .survey-form .group input[type="radio"]:hover,
 .survey-form .group input[type="checkbox"]:hover {
   border: 1px solid #d2d3d3;
 }
+
 .survey-form .group input[type="radio"]:checked,
 .survey-form .group input[type="checkbox"]:checked {
   border: 1px solid #d2d3d3;
   background-color: #2996ed;
 }
+
 .survey-form .group input[type="checkbox"] {
   border-radius: 0;
 }
+
 .survey-form .step-content {
   display: none;
 }
+
 .survey-form .step-content.current {
   display: block;
 }
+
 .survey-form .result {
   padding: 25px;
 }
+
 .survey-form .result h3 {
   color: #6a737f;
 }
+
 .survey-form .result p {
   font-weight: 500;
 }
@@ -2626,7 +2731,7 @@ button:hover {
 .rb {
   padding: 32px 0;
   text-align: center;
-  background: rgba(255,255,255,.03);
+  background: rgba(255, 255, 255, .03);
   border-radius: .3em;
 }
 
@@ -2662,7 +2767,7 @@ button:hover {
 
 .rb-tab-active .rb-spot {
   background: plum;
-  border: 2px solid rgba(243,49,128,.6);
+  border: 2px solid rgba(243, 49, 128, .6);
 }
 
 
@@ -2673,7 +2778,7 @@ button:hover {
   margin-bottom: 10px;
   padding: 5px;
   background-color: aliceblue;
-  border:"solid thin";
+  border: "solid thin";
 }
 
 .parastyle {
@@ -2689,8 +2794,10 @@ button:hover {
 }
 
 .blog-logo-img {
-  width: 60%; /* takes the 100 % width of its container (.box div)*/
-  height: 100%; /* takes the 100 % height of its container (.box div)*/
+  width: 60%;
+  /* takes the 100 % width of its container (.box div)*/
+  height: 100%;
+  /* takes the 100 % height of its container (.box div)*/
   object-fit: cover;
 }
 
@@ -2702,25 +2809,34 @@ button:hover {
 
 /* Keyframes */
 @keyframes wiggle {
-  0%, 7% {
+
+  0%,
+  7% {
     transform: rotateZ(0);
   }
+
   15% {
     transform: rotateZ(-15deg);
   }
+
   20% {
     transform: rotateZ(10deg);
   }
+
   25% {
     transform: rotateZ(-10deg);
   }
+
   30% {
     transform: rotateZ(6deg);
   }
+
   35% {
     transform: rotateZ(-4deg);
   }
-  40%, 100% {
+
+  40%,
+  100% {
     transform: rotateZ(0);
   }
 }
@@ -2739,9 +2855,8 @@ button:hover {
   /* min-height: 100vh; */
   padding: 30px;
 
-  color:rgb(6, 2, 3);
-  background: url("../img/CardBackground.png") center /
-    cover no-repeat fixed;
+  color: rgb(6, 2, 3);
+  background: url("../img/bgcards.png") center / cover no-repeat fixed;
   /* background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
     cover no-repeat fixed; */
   /* max-width: 300px;
@@ -2756,10 +2871,10 @@ button:hover {
 
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45);
+  /* background-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
 
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px); */
 }
 
 
@@ -3002,3 +3117,168 @@ button:hover {
 }
 
 
+/* social media side bar */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.instagram {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+/* end */
+
+
+@media (max-width: 568px) {}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+  .icon-bar a {
+    font-size: 10px;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+  }
+  h4 {
+    font-size: 15px !important;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  p {
+    font-size: 17px !important;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+}

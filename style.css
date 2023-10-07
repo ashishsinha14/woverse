@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: sans-serif;
   color: #444444;
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -664,7 +664,7 @@ section {
 }
 
 .about .content .btn-learn-more {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 1px;
@@ -692,10 +692,10 @@ section {
 .services .icon-box {
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
-  background: #fefefe;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
   border-radius: 18px;
   border-bottom: 5px solid #fff;
+  background: url("../img/bgcards.png") center / cover no-repeat fixed;
 }
 
 .services .icon-box .icon {
@@ -761,7 +761,7 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -894,7 +894,7 @@ section {
 .counts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
   color: #fff;
 }
@@ -1099,7 +1099,7 @@ section {
   font-size: 42px;
   color: #009961;
   font-weight: 500;
-  font-family: "Open Sans", sans-serif;
+  font-family: sans-serif;
   margin-bottom: 20px;
 }
 
@@ -1152,7 +1152,7 @@ section {
   color: #009961;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Raleway", sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
   transition: 0.3s;
 }
@@ -1246,7 +1246,7 @@ section {
 .faq .accordion-list a {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1509,7 +1509,7 @@ section {
   font-weight: 700;
   color: #fff;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: sans-serif;
   padding: 0;
   margin: 0 0 15px 0;
 }
