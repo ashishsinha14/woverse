@@ -129,7 +129,7 @@ label {
 }
 
 .progressbar {
-  margin: 2rem 1rem 2rem;
+  margin: 1rem 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -189,7 +189,7 @@ label {
 
 .survey__panel {
   display: none;
-  padding: 1rem;
+  padding: .1rem;
 }
 
 .survey__panel--current {
@@ -379,7 +379,7 @@ label {
 }
 
 .survey__panel__personaldetails .form-group {
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .survey__panel__personaldetails .name,
