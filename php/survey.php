@@ -14,12 +14,15 @@ if (!$conn) {
 // Escape user inputs for security
 $fname = mysqli_real_escape_string($conn, $_REQUEST['fname']);
 $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
+$whatsapp = mysqli_real_escape_string($conn, $_REQUEST['whatsapp']);
+$havingPeriod = mysqli_real_escape_string($conn, $_REQUEST['havingPeriod']);
+$ageCurrent = mysqli_real_escape_string($conn, $_REQUEST['ageCurrent']);
 $agePerimenopause = mysqli_real_escape_string($conn, $_REQUEST['agePerimenopause']);
 $survey = $_POST['survey'];
 $surveyDate = date("Y/m/d");
 
 
-$sql="INSERT INTO survey_input (fname, email, agePerimenopause, survey, surveydate ) VALUES ('$fname','$email','$agePerimenopause','$survey','$surveyDate')";
+$sql="INSERT INTO survey_input (fname, email,whatsapp, havingPeriod, ageCurrent, agePerimenopause, survey, surveydate ) VALUES ('$fname','$email','$whatsapp','$havingPeriod','$ageCurrent','$agePerimenopause','$survey','$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	header('Location: surveythankyou.html');
