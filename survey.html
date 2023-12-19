@@ -26,6 +26,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/popup.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -69,7 +70,6 @@
                         <i class="bi bi-list mobile-nav-toggle"></i>
                     </nav><!-- .navbar -->
 
-                    <a href="#about" class="get-started-btn scrollto">Menopause Assesment</a>
                 </div>
             </div>
 
@@ -86,8 +86,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li>Survey</li>
                 </ol>
-                <h2>Start Your Assesment. Result will be emailed to you. We Respect your privacy.</h2>
-
             </div>
         </section><!-- End Breadcrumbs -->
 
@@ -100,6 +98,7 @@
                         <form class="custom-form" id="regForm" method="post" action="php/survey.php">
                             <!-- One "tab" for each step in the form: -->
                             <div class="tab">
+                                <h2>Start Your Assesment. Result will be emailed to you. We Respect your privacy.</h2>
                                 <span class="question">What's your first name?</span>
                                 <p><input placeholder="My name is" oninput="this.className = ''" name="fname"
                                         id="fname"></p>
@@ -483,10 +482,10 @@
                                 </p>
                                 <span class="whyweask">Why we ask: We will send the assessment results on your
                                     email.</span>
-                                <p><input placeholder="Whatsapp Number..." oninput="this.className = ''" name="whatsapp" id="whatsapp"
-                                        >
+                                <p><input placeholder="Whatsapp Number..." oninput="this.className = ''" name="whatsapp"
+                                        id="whatsapp">
                                 </p>
-                                <span class="whyweask">If you want your result on whatsapp also</span>
+                                <span class="whyweask">If you want to enroll for free serum sample. We will reach out to you for shipping address.</span>
                             </div>
                             <input type="hidden" name="survey" id="survey">
                             <div style="overflow:auto;padding-top: 30px;">
@@ -512,6 +511,43 @@
                     </div>
                 </div>
             </div>
+            <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <div style="font-size: 22px; color: goldenrod;">
+                                A crucial assessment for women 30 and above, ensuring overall health and well-being.
+                            </div>
+                            <div class="notice">
+                               <!-- <img src="./assets/img/assessment-serum.png"> -->
+                               <div class="slider">
+  
+                                <a href="#slide-1">1</a>
+                                <a href="#slide-2">2</a>
+                                <a href="#slide-3">3</a>
+                              
+                                <div class="slides">
+                                  <div id="slide-1">
+                                    <img src="./img/1.png"> 
+                                  </div>
+                                  <div id="slide-2">
+                                    <img src="./img/2.png"> 
+                                  </div>
+                                  <div id="slide-3">
+                                    <img src="./img/3.png"> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="code"></div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-success" onclick="startAssessment()" >Let's Start Assessment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main><!-- End #main -->
@@ -519,10 +555,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
-            <div class="box">
-                <img class="blog-logo-img" style="object-fit: none;" src="images/logo-yellow.svg"
-                    alt="Menopause, Perimenopause, Aging Skin, Hot Flashes" />
-            </div>
+            
             <!-- <h3>Woverse</h3>
       <p>The Universe for her needs</p> -->
             <div class="social-links">
@@ -556,6 +589,15 @@
     <script>
         var currentTab = 0; // Current tab is set to be the first tab (0)
         showTab(currentTab); // Display the current tab
+        
+        $(document).ready(function () {
+            $('#discountModal').modal('show');
+        });
+        
+
+        function startAssessment() {
+            $('#discountModal').modal('hide');
+        }
 
         function showTab(n) {
             // This function will display the specified tab of the form...
