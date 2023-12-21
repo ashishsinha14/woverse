@@ -23,7 +23,7 @@ $surveyDate = date("Y/m/d");
 $platform = 'insta';
 
 
-$sql="INSERT INTO survey_input (fname, email,whatsapp, havingPeriod, ageCurrent, agePerimenopause, survey, surveydate ) VALUES ('$fname','$email','$whatsapp','$havingPeriod','$ageCurrent','$agePerimenopause','$survey','$surveyDate')";
+$sql="INSERT INTO survey_input (fname, email,whatsapp, havingPeriod, ageCurrent, agePerimenopause, survey, surveydate, platform ) VALUES ('$fname','$email','$whatsapp','$havingPeriod','$ageCurrent','$agePerimenopause','$survey','$surveyDate', '$platform')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	header('Location: surveythankyou.html');
