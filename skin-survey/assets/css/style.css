@@ -169,7 +169,7 @@ header h1 {
   margin-bottom: 30px;
 }
 .steps .label-head::before {
-  content: "C";
+  content: "1";
   display: inline-block;
   border-radius: 50%;
   background-color: rgb(234, 234, 234);
@@ -181,21 +181,42 @@ header h1 {
   line-height: 43px;
   text-align: center;
   margin-right: 17px;
+  border:solid thin brown;
+  font-weight: bold;
+  color: blueviolet;
 }
 #step1 .label-head::before {
-  content: "a";
+  content: "1";
 }
 #step2 .label-head::before {
-  content: "b";
+  content: "2";
 }
 #step3 .label-head::before {
-  content: "c";
+  content: "3";
 }
 #step4 .label-head::before {
-  content: "d";
+  content: "4";
 }
 #step5 .label-head::before {
-  content: "e";
+  content: "5";
+}
+#step6 .label-head::before {
+  content: "6";
+}
+#step7 .label-head::before {
+  content: "7";
+}
+#step8 .label-head::before {
+  content: "8";
+}
+#step9 .label-head::before {
+  content: "9";
+}
+#step10 .label-head::before {
+  content: "10";
+}
+#step11 .label-head::before {
+  content: "11";
 }
 
 .select-field {
@@ -427,6 +448,9 @@ header h1 {
 .table-3 .table-heading {
   background-color: rgb(83, 34, 91) !important;
 }
+.table-4 .table-heading {
+  background-color: rgb(221, 216, 145) !important;
+}
 .table-price {
   font-size: 20px;
   color: rgb(51, 51, 51);
@@ -489,7 +513,7 @@ footer {
   position: relative;
   top: 2px;
   margin: 0 10px;
-}*/
+} */
 .step-bar {
   display: flex;
   flex: 1;

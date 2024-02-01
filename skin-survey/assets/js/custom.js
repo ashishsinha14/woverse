@@ -79,55 +79,143 @@ $(document).ready(function () {
     }
   });
 
+  // $("#step2 .confirm").on("click", function () {
+  //   radiovalidate(2);
+
+  //   if (checkedradio == false) {
+  //     (function (el) {
+  //       setTimeout(function () {
+  //         el.children().remove(".reveal");
+  //       }, 3000);
+  //     })(
+  //       $("#error").append(
+  //         '<div class="reveal alert alert-danger">Choose an option!</div>'
+  //       )
+  //     );
+
+  //     radiovalidate(2);
+  //   } else {
+  //     $(".confirm").addClass("active");
+  //     setTimeout(function () {
+  //       next();
+  //       $(".confirm").removeClass("active");
+  //     }, 400);
+  //   }
+  // });
+
+  // $("#step3 .confirm").on("click", function () {
+  //   radiovalidate(3);
+
+  //   if (checkedradio == false) {
+  //     (function (el) {
+  //       setTimeout(function () {
+  //         el.children().remove(".reveal");
+  //       }, 3000);
+  //     })(
+  //       $("#error").append(
+  //         '<div class="reveal alert alert-danger">Choose an option!</div>'
+  //       )
+  //     );
+
+  //     radiovalidate(3);
+  //   } else {
+  //     $(".confirm").addClass("active");
+  //     setTimeout(function () {
+  //       next();
+  //       $(".confirm").removeClass("active");
+  //     }, 400);
+  //   }
+  // });
+
   $("#step2 .confirm").on("click", function () {
-    radiovalidate(2);
-
-    if (checkedradio == false) {
-      (function (el) {
-        setTimeout(function () {
-          el.children().remove(".reveal");
-        }, 3000);
-      })(
-        $("#error").append(
-          '<div class="reveal alert alert-danger">Choose an option!</div>'
-        )
-      );
-
-      radiovalidate(2);
-    } else {
-      $(".confirm").addClass("active");
-      setTimeout(function () {
-        next();
-        $(".confirm").removeClass("active");
-      }, 400);
-    }
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
   });
 
   $("#step3 .confirm").on("click", function () {
-    radiovalidate(3);
-
-    if (checkedradio == false) {
-      (function (el) {
-        setTimeout(function () {
-          el.children().remove(".reveal");
-        }, 3000);
-      })(
-        $("#error").append(
-          '<div class="reveal alert alert-danger">Choose an option!</div>'
-        )
-      );
-
-      radiovalidate(3);
-    } else {
-      $(".confirm").addClass("active");
-      setTimeout(function () {
-        next();
-        $(".confirm").removeClass("active");
-      }, 400);
-    }
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
   });
 
   $("#step4 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step5 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step6 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step7 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step8 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step9 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step10 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step11 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step12 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step13 .confirm").on("click", function () {
     $(".confirm").addClass("active");
     setTimeout(function () {
       next();
