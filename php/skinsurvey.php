@@ -13,7 +13,7 @@ if (!$conn) {
 
 // Escape user inputs for security
 $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
-// $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
+$email = mysqli_real_escape_string($conn, $_REQUEST['email']);
 // $whatsapp = mysqli_real_escape_string($conn, $_REQUEST['whatsapp']);
 // $havingPeriod = mysqli_real_escape_string($conn, $_REQUEST['havingPeriod']);
 // $ageCurrent = mysqli_real_escape_string($conn, $_REQUEST['ageCurrent']);
@@ -31,7 +31,8 @@ $sunexposure = mysqli_real_escape_string($conn, $_REQUEST['sunexposure']);
 $surveyDate = date("Y/m/d");
 
 
-$sql="INSERT INTO skinsurvey_input (age, skinType, menoPauseStage,sensitivity,hydration,sunscreen,diethabit,water, surveyDate) VALUES ('$age', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water','$surveyDate')";
+$sql="INSERT INTO skinsurvey_input (age, email, skinType, menoPauseStage, sensitivity, hydration, sunscreen, diethabit, water, sleep , stress, sunexposure, surveyDate) 
+VALUES ('$age', '$email', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water', '$sleep' , '$stress', '$sunexposure', '$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	header('Location: surveythankyou.html');
