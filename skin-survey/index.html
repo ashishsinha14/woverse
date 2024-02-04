@@ -87,7 +87,7 @@
     </div>
 
     <!-- forms -->
-    <form id="steps" method="post">
+    <form id="regForm" method="post" action="../php/skinsurvey.php">
 
       <div class="form-inner">
         <div class="container">
@@ -108,15 +108,15 @@
               </header>
               <div class="field-wrap">
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op1" value="30 -40" />
+                  <input type="radio" name="age" value="30 -40" />
                   <label class="op1">30 - 40</label>
                 </div>
                 <div class="delay-300ms radio-field">
-                  <input type="radio" name="op1" value="40 - 45" />
+                  <input type="radio" name="age" value="40 - 45" />
                   <label class="op2">40 - 50</label>
                 </div>
                 <div class="delay-400ms radio-field">
-                  <input type="radio" name="op1" value="50 and above" />
+                  <input type="radio" name="age" value="50 and above" />
                   <label class="op3">50 and above</label>
                 </div>
 
@@ -529,7 +529,7 @@
 
 
                 <div>
-                  <button type="button" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
+                  <button type="button" onclick="submitSurvey()" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
                 </div>
               </div>
             </fieldset>
@@ -555,6 +555,12 @@
 
   <!-- Custom JS -->
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    function submitSurvey() {
+      document.getElementById("regForm").submit();
+    }
+  </script>
 </body>
 
 </html>
