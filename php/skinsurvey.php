@@ -18,7 +18,7 @@ $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
 // $havingPeriod = mysqli_real_escape_string($conn, $_REQUEST['havingPeriod']);
 // $ageCurrent = mysqli_real_escape_string($conn, $_REQUEST['ageCurrent']);
 // $agePerimenopause = mysqli_real_escape_string($conn, $_REQUEST['agePerimenopause']);
-$skinType = $_POST['skinType'];
+$skinType = mysqli_real_escape_string($conn, $_REQUEST['skinType']);
 $surveyDate = date("Y/m/d");
 
 
