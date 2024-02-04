@@ -95,7 +95,7 @@
                 d="M267.144,684.361 C228.930,675.301 183.575,671.674 146.189,661.768 C108.615,652.224 79.714,636.280 63.935,607.87 C47.361,578.32 42.379,534.324 36.823,480.995 C31.607,428.625 24.258,366.592 13.504,317.931 C4.208,265.69 -2.294,229.518 0.781,196.700 C3.727,163.880 15.795,133.471 39.703,103.315 C63.723,73.152 101.433,43.612 151.250,24.404 C200.825,5.286 261.924,-4.252 322.239,3.531 C385.934,8.125 437.282,28.536 482.808,54.562 C527.840,80.696 566.414,111.752 600.600,141.604 C634.47,171.620 663.485,199.762 682.895,232.480 C701.761,265.856 710.44,302.744 692.340,363.971 C678.701,419.164 639.596,491.295 598.969,547.755 C557.855,605.36 513.906,648.97 476.147,672.116 C438.378,696.477 404.424,704.247 372.189,702.374 C339.880,700.827 308.733,690.431 267.144,684.361 " />
             </svg>
 
-            <!-- step3 form  -->
+            <!-- step1 form  -->
             <fieldset id="step1">
               <label class="label-head">Age?</label>
               <header>
@@ -132,12 +132,12 @@
 
           <!-- What is your skin type?  -->
           <section class="steps form-wrapper step-width">
-            <!-- step4 form  -->
+            <!-- step2 form  -->
             <fieldset id="step2">
               <label class="label-head">What is your skin type?</label>
               <div class="pricing-table">
                 <div class="row">
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div id="skinType" class="col-md-4 tab-50 sm-100" onclick="selectSkinType('Dry')">
                     <div class="revealfield table-single table-1 active">
                       <div class="table-heading">
                         <h3>Dry</h3>
@@ -149,10 +149,10 @@
                       <p>Dry skin feels dehydrated, flaky, and more prone to irritation</p>
                     </div>
                   </div>
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div class="col-md-4 tab-50 sm-100" onclick="selectSkinType('Oily')">
                     <div class="revealfield delay-200ms table-single table-4">
                       <div class="table-heading">
-                        <h3>Oily</h3>
+                        <h3 id="skinType">Oily</h3>
                       </div>
                       <div class="table-img">
                         <img src="assets/images/OilySkin.png" alt="offer" />
@@ -163,10 +163,10 @@
                         never experienced acne might suddenly develop acne in their 30s, 40s or 50s</p>
                     </div>
                   </div>
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div class="col-md-4 tab-50 sm-100" onclick="selectSkinType('Combination')">
                     <div class="delay-100ms revealfield table-single table-2">
                       <div class="table-heading">
-                        <h3>Combination</h3>
+                        <h3 id="skinType">Combination</h3>
                       </div>
                       <div class="table-img">
                         <img src="assets/images/Combination Skin.png" alt="offer" />
@@ -176,7 +176,7 @@
                         face. The most common combination is a mix of oily and dry or normal areas. </p>
                     </div>
                   </div>
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div class="col-md-4 tab-50 sm-100" onclick="selectSkinType('Normal')">
                     <div class="revealfield delay-200ms table-single table-3">
                       <div class="table-heading">
                         <h3>Normal</h3>
@@ -340,7 +340,7 @@
             </div>
           </section>
 
-          
+
           <!-- Sunscreen? -->
           <section class="steps form-wrapper step-width">
             <!-- step8 form  -->
@@ -385,17 +385,20 @@
                 <div class="radio-field">
                   <input type="radio" name="op5"
                     value="Mostly: Balanced diet, antioxidant rich fruits and vegetables" />
-                  <label class="op1" style="font-size: 12px !important;">Mostly: Balanced diet, antioxidant rich fruits and vegetables.</label>
+                  <label class="op1" style="font-size: 12px !important;">Mostly: Balanced diet, antioxidant rich fruits
+                    and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
                   <input type="radio" name="op5"
                     value="Occasionally: Balanced diet, antioxidant rich fruits and vegetables" />
-                  <label class="op2" style="font-size: 12px !important;">Occasionally: Balanced diet, antioxidant rich fruits and vegetables.</label>
+                  <label class="op2" style="font-size: 12px !important;">Occasionally: Balanced diet, antioxidant rich
+                    fruits and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
                   <input type="radio" name="op5"
                     value="Rarely: Balanced diet, antioxidant rich fruits and vegetables" />
-                  <label class="op3" style="font-size: 12px !important;"> Rarely: Balanced diet, antioxidant rich fruits and vegetables.</label>
+                  <label class="op3" style="font-size: 12px !important;"> Rarely: Balanced diet, antioxidant rich fruits
+                    and vegetables.</label>
                 </div>
 
 
@@ -525,7 +528,8 @@
 
 
                 <div>
-                  <button type="button" onclick="submitSurvey()" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
+                  <button type="button" onclick="submitSurvey()" class="mt-5 confirm"
+                    style="position: relative; left: 30%;">Ok</button>
                 </div>
               </div>
             </fieldset>
@@ -536,7 +540,7 @@
               </button>
             </div>
           </section>
-         
+
         </div>
       </div>
     </form>
@@ -553,8 +557,12 @@
   <script src="assets/js/custom.js"></script>
 
   <script>
+
     function submitSurvey() {
       document.getElementById("regForm").submit();
+    }
+    function selectSkinType(skinType) {
+      document.getElementById("skinType").value = skinType;
     }
   </script>
 </body>

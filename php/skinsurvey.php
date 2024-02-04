@@ -18,11 +18,11 @@ $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
 // $havingPeriod = mysqli_real_escape_string($conn, $_REQUEST['havingPeriod']);
 // $ageCurrent = mysqli_real_escape_string($conn, $_REQUEST['ageCurrent']);
 // $agePerimenopause = mysqli_real_escape_string($conn, $_REQUEST['agePerimenopause']);
-// $survey = $_POST['survey'];
+$skinType = $_POST['skinType'];
 $surveyDate = date("Y/m/d");
 
 
-$sql="INSERT INTO skinsurvey_input (age, surveyDate) VALUES ('$age', '$surveyDate')";
+$sql="INSERT INTO skinsurvey_input (age, skinType, surveyDate) VALUES ('$age', '$skinType', '$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	header('Location: surveythankyou.html');
