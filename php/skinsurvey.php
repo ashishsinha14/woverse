@@ -19,10 +19,19 @@ $age = mysqli_real_escape_string($conn, $_REQUEST['age']);
 // $ageCurrent = mysqli_real_escape_string($conn, $_REQUEST['ageCurrent']);
 // $agePerimenopause = mysqli_real_escape_string($conn, $_REQUEST['agePerimenopause']);
 $skinType = $_POST['skinType'];
+$menoPauseStage = $_POST['menoPauseStage'];
+$sensitivity = mysqli_real_escape_string($conn, $_REQUEST['sensitivity']);
+$hydration = mysqli_real_escape_string($conn, $_REQUEST['hydration']);
+$sunscreen = mysqli_real_escape_string($conn, $_REQUEST['sunscreen']);
+$diethabit = mysqli_real_escape_string($conn, $_REQUEST['diethabit']);
+$water = mysqli_real_escape_string($conn, $_REQUEST['water']);
+$sleep = mysqli_real_escape_string($conn, $_REQUEST['sleep']);
+$stress = mysqli_real_escape_string($conn, $_REQUEST['stress']);
+$sunexposure = mysqli_real_escape_string($conn, $_REQUEST['sunexposure']);
 $surveyDate = date("Y/m/d");
 
 
-$sql="INSERT INTO skinsurvey_input (age, skinType, surveyDate) VALUES ('$age', '$skinType', '$surveyDate')";
+$sql="INSERT INTO skinsurvey_input (age, skinType, menoPauseStage,sensitivity,hydration,sunscreen,diethabit,water, surveyDate) VALUES ('$age', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water','$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	header('Location: surveythankyou.html');

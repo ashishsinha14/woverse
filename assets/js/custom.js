@@ -18,6 +18,17 @@ var divs = $(".show-section section");
 var now = 0; // currently shown div
 divs.hide().first().show(); // hide all divs except first
 
+function ValidateEmail(mail) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value)) {
+    return true;
+  }
+  return (false)
+}
+
+function submitSurvey() {
+  document.getElementById("regForm").submit();
+}
+
 function next() {
   divs.eq(now).hide();
   now = now + 1 < divs.length ? now + 1 : 0;
@@ -207,20 +218,15 @@ $(document).ready(function () {
     }, 400);
   });
 
-  $("#step12 .confirm").on("click", function () {
-    $(".confirm").addClass("active");
-    setTimeout(function () {
-      next();
-      $(".confirm").removeClass("active");
-    }, 400);
-  });
 
-  $("#step13 .confirm").on("click", function () {
-    $(".confirm").addClass("active");
-    setTimeout(function () {
-      next();
-      $(".confirm").removeClass("active");
-    }, 400);
+  $("#step12 .confirm").on("click", function () {
+    if (ValidateEmail(document.getElementById('email')) === false) {
+      $("#error").append(
+        '<div class="reveal alert alert-danger">Please enter a valid email!</div>'
+      )
+    } else {
+      submitSurvey();
+    }
   });
 
   // check step1

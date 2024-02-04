@@ -210,7 +210,8 @@
             <!-- step5 form  -->
             <fieldset id="step3">
               <label class="label-head">Menopausal Stage?</label>
-              <div class="pricing-table">
+              <input type="hidden" name="menoPauseStage" id="menoPauseStage">
+              <div class="pricing-table" onclick="selectMenopauseStage('Perimenopause')">
                 <div class="row">
                   <div class="col-md-4 tab-50 sm-100">
                     <div class="revealfield table-single table-1 active">
@@ -226,7 +227,7 @@
                         Indian Women.</p>
                     </div>
                   </div>
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div class="col-md-4 tab-50 sm-100" onclick="selectMenopauseStage('Postmenopause')">
                     <div class="revealfield delay-200ms table-single table-4">
                       <div class="table-heading">
                         <h3>Postmenopause</h3>
@@ -237,7 +238,7 @@
                         year.</p>
                     </div>
                   </div>
-                  <div class="col-md-4 tab-50 sm-100">
+                  <div class="col-md-4 tab-50 sm-100" onclick="selectMenopauseStage('Not Sure')">
                     <div class="delay-100ms revealfield table-single table-2">
                       <div class="table-heading">
                         <h3>Not Sure</h3>
@@ -273,19 +274,19 @@
                 of spots. It could be hives or what we call urticaria. Become more allergic to things.</p>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op2" value="Very sensitive" />
+                  <input type="radio" name="sensitivity" value="Very sensitive" />
                   <label class="op1">Very sensitive</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op2" value="Sensitive" />
+                  <input type="radio" name="sensitivity" value="Sensitive" />
                   <label class="op2">Sensitive</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op2" value="Normal" />
+                  <input type="radio" name="sensitivity" value="Normal" />
                   <label class="op3">Normal</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op2" value="Resilient" />
+                  <input type="radio" name="sensitivity" value="Resilient" />
                   <label class="op4">Resilient</label>
                 </div>
 
@@ -314,15 +315,15 @@
                 skin's ability to retain ceramides, fatty acids that help the skin lock in moisture.</p>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op3" value="Always feels hydrated" />
+                  <input type="radio" name="hydration" value="Always feels hydrated" />
                   <label class="op1">Always feels hydrated</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op3" value="Occasionally feels dehydrated" />
+                  <input type="radio" name="hydration" value="Occasionally feels dehydrated" />
                   <label class="op2"> Occasionally feels dehydrated</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op3" value=" Often feels parched and dehydrated" />
+                  <input type="radio" name="hydration" value=" Often feels parched and dehydrated" />
                   <label class="op3"> Often feels parched and dehydrated</label>
                 </div>
 
@@ -350,15 +351,15 @@
               <label class="label-head">Frequency of Sunscreen use?</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op4" value="Daily" />
+                  <input type="radio" name="sunscreen" value="Daily" />
                   <label class="op1">Daily</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op4" value="Occasionally" />
+                  <input type="radio" name="sunscreen" value="Occasionally" />
                   <label class="op2"> Occasionally</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op4" value="Rarely" />
+                  <input type="radio" name="sunscreen" value="Rarely" />
                   <label class="op3"> Rarely</label>
                 </div>
 
@@ -384,19 +385,19 @@
               <label class="label-head">Dietary Habits:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op5"
+                  <input type="radio" name="diethabit"
                     value="Mostly: Balanced diet, antioxidant rich fruits and vegetables" />
                   <label class="op1" style="font-size: 12px !important;">Mostly: Balanced diet, antioxidant rich fruits
                     and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op5"
+                  <input type="radio" name="diethabit"
                     value="Occasionally: Balanced diet, antioxidant rich fruits and vegetables" />
                   <label class="op2" style="font-size: 12px !important;">Occasionally: Balanced diet, antioxidant rich
                     fruits and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op5"
+                  <input type="radio" name="diethabit"
                     value="Rarely: Balanced diet, antioxidant rich fruits and vegetables" />
                   <label class="op3" style="font-size: 12px !important;"> Rarely: Balanced diet, antioxidant rich fruits
                     and vegetables.</label>
@@ -424,11 +425,11 @@
               <label class="label-head">Daily Water Intake:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op6" value="6-8 glasses" />
+                  <input type="radio" name="water" value="6-8 glasses" />
                   <label class="op1">6-8 glasses</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op6" value="Less than 5 glass" />
+                  <input type="radio" name="water" value="Less than 5 glass" />
                   <label class="op2">Less than 5 glass</label>
                 </div>
                 <div>
@@ -452,15 +453,15 @@
               <label class="label-head">Sleep Quality Every Night:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op7" value="Good, 7-9 hours" />
+                  <input type="radio" name="sleep" value="Good, 7-9 hours" />
                   <label class="op1"> Good, 7-9 hours</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op7" value="Average, 5-7 hours" />
+                  <input type="radio" name="sleep" value="Average, 5-7 hours" />
                   <label class="op2">Average, 5-7 hours</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op7" value="Poor, less than 5 hours" />
+                  <input type="radio" name="sleep" value="Poor, less than 5 hours" />
                   <label class="op3">Poor, less than 5 hours</label>
                 </div>
                 <div>
@@ -483,15 +484,15 @@
               <label class="label-head">Stress Levels:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op8" value="Low" />
+                  <input type="radio" name="stress" value="Low" />
                   <label class="op1"> Low</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op8" value="Moderate" />
+                  <input type="radio" name="stress" value="Moderate" />
                   <label class="op2">Moderate</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op8" value="High" />
+                  <input type="radio" name="stress" value="High" />
                   <label class="op3">High</label>
                 </div>
                 <div>
@@ -515,22 +516,21 @@
               <label class="label-head">Exposure to Sun:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="op9" value="Minimal" />
+                  <input type="radio" name="sunexposure" value="Minimal" />
                   <label class="op1">Minimal</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op9" value="Moderate" />
+                  <input type="radio" name="sunexposure" value="Moderate" />
                   <label class="op2">Moderate</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="op9" value="High" />
+                  <input type="radio" name="sunexposure" value="High" />
                   <label class="op3">High</label>
                 </div>
 
 
                 <div>
-                  <button type="button" onclick="submitSurvey()" class="mt-5 confirm"
-                    style="position: relative; left: 30%;">Ok</button>
+                  <button type="button" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
                 </div>
               </div>
             </fieldset>
@@ -542,7 +542,27 @@
             </div>
           </section>
 
+          <!-- Email -->
+          <section class="steps form-wrapper step-width">
+            <!-- step13 form  -->
+
+            <fieldset id="step12">
+              <label class="label-head">Email:</label>
+              <div class="field-wrap">
+                <div class="inputField">
+                  <input class="required" type="text" id="email" name="review" placeholder="someone@example.com" />
+                </div>
+                <span class="maxChar">
+                  Last step before result. We will send you similar useful information in future
+                </span>
+                <button type="button" onclick="ValidateEmail()" class="mt-5 confirm"
+                  style="position: relative; left: 30%;">Ok</button>
+              </div>
         </div>
+        </fieldset>
+        </section>
+
+      </div>
       </div>
     </form>
   </main>
@@ -558,13 +578,13 @@
   <script src="assets/js/custom.js"></script>
 
   <script>
-
-    function submitSurvey() {
-      document.getElementById("regForm").submit();
-    }
     function selectSkinType(skinType) {
       document.getElementById("skinType").value = skinType;
     }
+    function selectMenopauseStage(stage) {
+      document.getElementById("menoPauseStage").value = stage;
+    }
+    
   </script>
 </body>
 
