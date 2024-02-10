@@ -40,6 +40,205 @@
         gtag('config', 'G-R9E1241RL4');
         gtag('config', 'AW-11181228604');
     </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+        :root {
+            --principal-font: 'Kumbh Sans', sans-serif;
+            --font-size: 12px;
+            --bg-gradient: linear-gradient(to top, hsl(273, 73%, 77%), hsl(240, 71%, 84%));
+            --primary-dark-color: hsl(238, 29%, 16%);
+            --primary-soft-color: hsl(14, 88%, 65%);
+            --neutral-dark-color: hsl(237, 12%, 33%);
+            --neutral-soft-color: hsl(240, 6%, 50%);
+
+        }
+
+
+        html {
+            box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: inherit;
+        }
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            background-color: hsl(240, 5%, 91%);
+            padding: 8px 0 5px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        /* global */
+        /*================================================*/
+
+
+        body {
+            margin: 0;
+            font-family: var(--principal-font);
+            font-size: 12px;
+            color: var(--neutral-dark-color);
+
+            background: var(--bg-gradient);
+            background-size: cover;
+        }
+
+        .card-wrapper {
+            min-height: 100vh;
+            padding-bottom: 50px;
+            /* footer fixed */
+            padding-top: 25px;
+        }
+
+        p {
+            margin: 0 0 12px;
+            line-height: 1.5;
+        }
+
+        h2 {
+            margin: 12px 0;
+        }
+
+
+        /* generics */
+        /*================================================*/
+
+        .content-cc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* FAQ card */
+        /*================================================*/
+
+        .faq-card {
+
+            background-color: #fff;
+            border-radius: 20px;
+
+            /* max-width: 310px; */
+            margin-top: 90px;
+
+            box-shadow: 0px 60px 50px -25px rgba(0, 0, 0, 0.35);
+        }
+
+        /* FAQ card: imagenes */
+        /*================================================*/
+
+
+        .faq-ilustrations {
+            position: relative;
+        }
+
+        .faq-ilustrations .mobile.ilust {
+            position: absolute;
+            top: -110px;
+            left: -30px;
+            right: 0;
+        }
+
+        .mobile {
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* FAQ card: main */
+        /*================================================*/
+
+        .faq-content {
+            padding: 9px 25px 3rem;
+        }
+
+        .faq-content h1 {
+            font-size: 32px;
+            text-align: center;
+            color: var(--primary-dark-color);
+        }
+
+        .faq-accordion {
+            padding: 8px 0;
+            border-bottom: 1px solid hsl(240, 5%, 91%);
+        }
+
+
+        /* FAQ card: main title */
+        /*================================================*/
+
+        /* checkbox tgg-title*/
+        input.tgg-title {
+            appearance: unset;
+            all: unset;
+        }
+
+        .faq-accordion-title label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-accordion-title h2 {
+            font-size: 12px
+                /*var(--font-size)*/
+            ;
+            font-weight: 400;
+            color: var(--neutral-dark-color);
+        }
+
+        .faq-accordion-title span {
+            margin-left: auto;
+            transition: transform .4s ease-in-out;
+        }
+
+
+        /* FAQ card: main content */
+        /*================================================*/
+
+        .faq-accordion-content {
+            color: var(--neutral-soft-color);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .4s ease-in-out;
+        }
+
+
+        /* Effects */
+        /*================================================*/
+
+        /* main title, accordion title effects */
+
+        .faq-accordion-title:hover h2 {
+            color: var(--primary-soft-color)
+        }
+
+        /* onclick "" */
+        .faq-accordion .tgg-title:checked+div>label>h2 {
+            font-weight: 700;
+        }
+
+        .faq-accordion .tgg-title:checked+div>label>span {
+            will-change: transform;
+            transform: rotate(180deg);
+        }
+
+        /* main content, acordion text effect */
+
+        .faq-accordion .tgg-title:checked~.faq-accordion-content {
+            will-change: max-height;
+            max-height: 80px;
+        }
+    </style>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -96,7 +295,7 @@
                                 <li><a class="nav-link scrollto" href="index.html#services">Solutions</a></li>
                                 <li><a class="nav-link scrollto" href="index.html#menopause">Menopause</a></li>
                                 <li><a class="nav-link scrollto" href="Blogs.html">Blogs</a></li>
-                                <li><a class="nav-link scrollto active" href="pro-aging-serum.html">Products</a></li>
+                                <li><a class="nav-link scrollto" href="product-list.html">Products</a></li>
                                 <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
                             </ul>
                             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -123,36 +322,42 @@
                         <div class="container">
                             <div class="row g-5 align-items-center">
                                 <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-                                    <div class="text-center" style="background-color: white !important;">
-                                        <h2 class="fw-bold text-uppercase" style="color: #7f67b0;">Pro Aging Therapy For
-                                            Peri-Post Menopausal Skin</h2>
-                                        <img src="img/Serum.jpg">
+                                    <div class="text-center">
+                                        <h2 class="fw-bold text-uppercase" style="font-size: 20px;">Cooling Mist For Hot
+                                            Flashes Designed For Peri-Post Menopausal Skin</h2>
+                                        <img src="img/Mist.jpeg">
 
                                     </div>
                                     <div class="row g-5 align-items-center">
                                         <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
-                                            <div class="text-center" style="background-color: white !important;">
+                                            <div class="text-center">
                                                 <a class="btn btn-primary py-2 px-4 get-started-btn scrollto shakingbutton"
                                                     href="https://api.whatsapp.com/send?phone=916386537206&text=Need Free Sample of Pro-Aging Serum">Claim
                                                     Free Sample</a>
-        
+
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p>Introducing our groundbreaking <strong>Pro Aging Serum,</strong> meticulously crafted
-                                            with cutting-edge, <strong>award-winning ingredients derived from years of intensive
+                                        <p>Introducing our groundbreaking <strong>India First Mist For Hot Flashes,</strong> meticulously
+                                            crafted
+                                            with cutting-edge, <strong>award-winning ingredients derived from years of
+                                                intensive
                                                 research in biotechnology.</strong> Infused with potent antioxidants,
                                             collagen-boosting peptides, and nourishing botanicals, <strong>this serum is
-                                            engineered to restore skin elasticity, diminish fine lines, and unveil a
-                                            radiant, youthful complexion. We don't just understand skin science; we
-                                            master it, delivering a powerful formula that transforms your skin's
-                                            vitality and radiance. Experience the epitome of skincare excellence with
-                                            our Pro Aging Serum – where science meets beauty, and age becomes a symbol
-                                            of strength and elegance.
-                                            <br>
+                                                engineered to restore skin elasticity, diminish fine lines, and unveil a
+                                                radiant, youthful complexion. We don't just understand skin science; we
+                                                master it, delivering a powerful formula that transforms your skin's
+                                                vitality and radiance. Experience the epitome of skincare excellence
+                                                with
+                                                our Pro Aging Serum – where science meets beauty, and age becomes a
+                                                symbol
+                                                of strength and elegance.
+                                                <br>
                                         </p>
-                                        <p><strong>A definitive solution for skin issues related to menopause, guaranteeing unparalleled effectiveness and visible results.</strong></p>
+                                        <p><strong>A definitive solution for skin issues related to menopause,
+                                                guaranteeing unparalleled effectiveness and visible results.</strong>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +426,7 @@
                                 Serum and let your skin radiate timeless beauty. Order now and
                                 experience the transformative difference!
                             </p>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -390,115 +595,169 @@
 
                         </div>
 
-                        <div class="row g-5">
-                            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.1s">
-                                <div class="btn-square border mx-auto mb-4" style="width: 350px; height: 350px;">
-                                    <img src="./img/Sarcoslim_planta_a.avif" />
+                        <div class="card-wrapper  | content-cc">
+                            <div class="faq-card">
+
+                                <div class="faq-ilustrations">
+
+                                    <!-- mobile -->
+                                    <img class="mobile pattern"
+                                        src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/bg-pattern-mobile.svg">
+                                    </img>
+                                    <img class="mobile ilust"
+                                        src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/illustration-woman-online-mobile.svg">
+                                    </img>
+                                    <!-- mobile -->
                                 </div>
-                                <h5>Sarcocapnos Plant</h5>
-                                <span style="color: #7f67b0;">A small plant found in the south of the Iberian Peninsula
-                                    which is the source of Our ingredient Sarcoslim</span>
-                            </div>
-                            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.3s">
-                                <div class="btn-square border mx-auto mb-4" style="width: 350px; height: 350px;">
-                                    <img src="./img/glycoinnatural.jpg" />
-                                </div>
-                                <h5>Myrothamnus flabellifolia</h5>
-                                <span style="color: #7f67b0;">A plant found in the deserts of southern Africa which is
-                                    the source of our ingredient Glycoin Natural.</span>
-                            </div>
-                            <div class="col-lg-4 text-center wow fadeIn" data-wow-delay="0.5s">
-                                <div class="btn-square border mx-auto mb-4" style="width: 350px; height: 350px;">
-                                    <img src="./img/hyaluronic-acid.png" />
-                                </div>
-                                <h5>Hyaluronic acid</h5>
-                                <span style="color: #7f67b0;">It functions as a humectant and holds water molecules onto
-                                    the surface of your skin to keep it nice and hydrated.</span>
-                            </div>
-                        </div>
+
+                                <main class="faq-content">
+                                    <h1>FAQ</h1>
+
+                                    <div class="faq-articles">
+
+                                        <article class="faq-accordion">
+
+                                            <input type="checkbox" class="tgg-title" id="tgg-title-1">
+
+                                            <div class="faq-accordion-title">
+                                                <label for="tgg-title-1">
+                                                    <h2>
+                                                        Will I feel relief instantly after spraying the Zero Degree
+                                                        Cooling Mist?</h2>
+                                                    <span class="arrow-icon">
+                                                        <img
+                                                            src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="faq-accordion-content">
+                                                <p>Yes, our cooling body mist has been clinically proven to deliver
+                                                    instant relief from hot flashes, night sweats and overheating while
+                                                    promoting a sense of calm.</p>
+                                            </div>
+
+                                        </article> <!-- faq accordion -->
+
+                                        <article class="faq-accordion">
+
+                                            <input type="checkbox" class="tgg-title" id="tgg-title-2">
+
+                                            <div class="faq-accordion-title">
+                                                <label for="tgg-title-2">
+                                                    <h2>
+                                                        How long does the Zero Degree Cooling Mist’s cooling effect
+                                                        last?
+                                                    </h2>
+                                                    <span class="arrow-icon">
+                                                        <img
+                                                            src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="faq-accordion-content">
+                                                <p>In our clinical study, 97% of women said they still felt refreshed an
+                                                    hour after initial use.</p>
+                                            </div>
+
+                                        </article> <!-- faq accordion -->
+
+                                        <article class="faq-accordion">
+
+                                            <input class="tgg-title" type="checkbox" id="tgg-title-3">
+
+                                            <div class="faq-accordion-title">
+                                                <label for="tgg-title-3">
+                                                    <h2>
+                                                        How much of the Zero Degree Cooling Mist should I use?
+                                                    </h2>
+                                                    <span class="arrow-icon">
+                                                        <img
+                                                            src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="faq-accordion-content">
+                                                <p>We recommend 2 sprays to the back of the neck to start.&nbsp; The
+                                                    cooling effect is quite strong and intensifies over the first few
+                                                    minutes of use.&nbsp; Ultimately, you can use as much as you need.
+                                                    Prior to using, shake well. Hold 8-10 inches away and mist on pulse
+                                                    points such as the back of the neck, wrists, and chest until you
+                                                    feel relief.</p>
+                                            </div>
+
+                                        </article> <!-- faq accordion -->
+
+                                        <article class="faq-accordion">
+
+                                            <input class="tgg-title" type="checkbox" id="tgg-title-4">
+
+                                            <div class="faq-accordion-title">
+                                                <label for="tgg-title-4">
+                                                    <h2>
+                                                        How often should I reapply the Zero Degree Cooling Mist?
+                                                    </h2>
+                                                    <span class="arrow-icon">
+                                                        <img
+                                                            src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="faq-accordion-content">
+                                                <p>
+                                                    The Cooling Mist has been shown to keep you cool for up to an hour
+                                                    after the initial application. Re-apply as needed. We recommend
+                                                    rinsing off the product after 24 hours.</p>
+                                            </div>
+
+                                        </article> <!-- faq accordion -->
+
+                                        <article class="faq-accordion">
+
+                                            <input class="tgg-title" type="checkbox" id="tgg-title-5">
+
+                                            <div class="faq-accordion-title">
+                                                <label for="tgg-title-5">
+                                                    <h2>
+                                                        Will the Zero Degree Cooling Mist stain clothing?
+                                                    </h2>
+                                                    <span class="arrow-icon">
+                                                        <img
+                                                            src="https://raw.githubusercontent.com/Romerof/FAQ-accordion-card/main/images/icon-arrow-down.svg">
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                            <div class="faq-accordion-content">
+                                                <p> No, the Cooling Mist will not stain clothing..</p>
+                                            </div>
+
+                                        </article> <!-- faq accordion -->
+
+                                    </div> <!-- faq articles -->
+
+                                </main> <!-- faq -->
+
+                            </div> <!-- faq card -->
+
+                        </div> <!-- card wrapper -->
+
+                        <footer class="attribution">
+                            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+                                Mentor</a>.
+                            Coded by <a href="https://www.frontendmentor.io/profile/Romerof/bookmarks">Javier Romero</a>
+                            🔥. *movile version* See full <a href="https://github.com/Romerof/FAQ-accordion-card"
+                                target="_blank">Gitbhub</a>
+                        </footer>
                     </div>
                 </div>
                 <!-- How To Use End -->
 
 
-                <!-- Product Start -->
-                <!-- <div class="container-fluid py-5">
-                    <div class="container">
-                        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
-                            <h1 class="text-primary mb-3"><span class="fw-light text-dark">Our Natural</span> Hair
-                                Products</h1>
-                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet,
-                                erat non malesuada consequat, nibh erat tempus risus.</p>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="product-item text-center border h-100 p-4">
-                                    <img class="img-fluid mb-4" src="img/product-1.png" alt="">
-                                    <div class="mb-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small>(99)</small>
-                                    </div>
-                                    <a href="" class="h6 d-inline-block mb-2">Hair Shining Shampoo</a>
-                                    <h5 class="text-primary mb-3">$99.99</h5>
-                                    <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="product-item text-center border h-100 p-4">
-                                    <img class="img-fluid mb-4" src="img/product-2.png" alt="">
-                                    <div class="mb-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small>(99)</small>
-                                    </div>
-                                    <a href="" class="h6 d-inline-block mb-2">Anti-dandruff Shampoo</a>
-                                    <h5 class="text-primary mb-3">$99.99</h5>
-                                    <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="product-item text-center border h-100 p-4">
-                                    <img class="img-fluid mb-4" src="img/product-1.png" alt="">
-                                    <div class="mb-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small>(99)</small>
-                                    </div>
-                                    <a href="" class="h6 d-inline-block mb-2">Anti Hair Fall Shampoo</a>
-                                    <h5 class="text-primary mb-3">$99.99</h5>
-                                    <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                                <div class="product-item text-center border h-100 p-4">
-                                    <img class="img-fluid mb-4" src="img/product-2.png" alt="">
-                                    <div class="mb-2">
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small class="fa fa-star text-primary"></small>
-                                        <small>(99)</small>
-                                    </div>
-                                    <a href="" class="h6 d-inline-block mb-2">Hair Growing Shampoo</a>
-                                    <h5 class="text-primary mb-3">$99.99</h5>
-                                    <a href="" class="btn btn-outline-primary px-3">Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Product End -->
+               
             </div>
     </div>
     </section>
