@@ -144,7 +144,7 @@ Generic layout (demo looks)
             display: grid;
             margin-inline: auto;
             padding-inline: 5px;
-            /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
             gap: 10px;
         }
 
@@ -153,6 +153,13 @@ Generic layout (demo looks)
             flex-direction: row;
         }
 
+        .prodcard {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
 
         @media screen and (max-width: 960px) {
             article {
@@ -293,8 +300,9 @@ Generic layout (demo looks)
 
         <div class="main-content">
             <div class="proddisplay">
-                <section class="articles">
+                <section class="articles prodcard">
                     <article>
+                        <h2 style="text-align:center">Proaging Face Serum</h2>
                         <div class="article-wrapper">
                             <figure>
                                 <img src="img/Serum.jpeg" alt="" />
@@ -324,14 +332,16 @@ Generic layout (demo looks)
                         </div>
                     </article>
                 </section>
-                <section class="articles">
+                <section class="articles prodcard">
                     <article>
+                        <h2 style="text-align:center">Zero Degree Cool Mist</h2>
                         <div class="article-wrapper">
                             <figure>
                                 <img src="img/Mist.jpeg" alt="" />
                             </figure>
                             <div class="article-body">
-                                <span style="font-weight: bold; color: blueviolet;">Introducing our groundbreaking Mist for Hotflashes</span>
+                                <span style="font-weight: bold; color: blueviolet;">Introducing our groundbreaking Mist
+                                    for Hotflashes</span>
                                 <p>
                                     Meticulously crafted with cutting-edge,
                                     award-winning ingredients derived from years of intensive research in biotechnology.
