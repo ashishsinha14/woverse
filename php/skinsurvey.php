@@ -132,11 +132,11 @@ $inputData = [
 $finalScore = calculateFinalScore($inputData);
 
 // Determine skin condition based on the final score
-if ($finalScore >= 60 && $finalScore <= 75) {
+if ($finalScore >= 52 && $finalScore <= 67) {
     $skinCondition = 'Excellent skin condition';
-} elseif ($finalScore >= 45 && $finalScore <= 59) {
+} elseif ($finalScore >= 47 && $finalScore <= 51) {
     $skinCondition = 'Good skin condition';
-} elseif ($finalScore >= 30 && $finalScore <= 44) {
+} elseif ($finalScore >= 22 && $finalScore <= 36) {
     $skinCondition = 'Moderate skin condition';
 } else {
     $skinCondition = 'Needs attention; consider consulting a skincare professional or dermatologist for personalized advice.';
