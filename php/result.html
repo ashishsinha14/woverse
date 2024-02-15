@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Condition Result</title>
+</head>
+<body>
+    <h2>Skin Condition Result</h2>
+    <div id="finalScore"></div>
+    <div id="skinCondition"></div>
+
+    <script>
+        // Function to get URL parameter by name
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Read values from URL parameters
+        var finalScore = getUrlParameter('score');
+        var skinCondition = getUrlParameter('condition');
+
+        // Display values on the page
+        document.getElementById('finalScore').innerHTML = 'Final Score: ' + finalScore;
+        document.getElementById('skinCondition').innerHTML = 'Skin Condition: ' + skinCondition;
+    </script>
+</body>
+</html>

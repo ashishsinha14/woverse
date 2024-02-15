@@ -151,7 +151,16 @@ VALUES ('$age', '$email', '$skinType', '$menoPauseStage','$sensitivity','$hydrat
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	// header('Location: surveythankyou.html');
+	header("Content-Type: text/plain");
 	header("Location: result.php?score=$finalScore&condition=".urlencode($skinCondition));
+	echo "<script>
+            function redirectToResult() {
+                var finalScore = '$finalScore';
+                var skinCondition = '" . urlencode($skinCondition) . "';
+                window.location.href = 'result.html?score=' + finalScore + '&condition=' + skinCondition;
+            }
+            redirectToResult();
+          </script>";
 } else {
 	echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
