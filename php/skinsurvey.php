@@ -24,6 +24,8 @@ $water = mysqli_real_escape_string($conn, $_REQUEST['water']);
 $sleep = mysqli_real_escape_string($conn, $_REQUEST['sleep']);
 $stress = mysqli_real_escape_string($conn, $_REQUEST['stress']);
 $sunexposure = mysqli_real_escape_string($conn, $_REQUEST['sunexposure']);
+$smoking = mysqli_real_escape_string($conn, $_REQUEST['smoking']);
+$alcohol = mysqli_real_escape_string($conn, $_REQUEST['alcohol']);
 $surveyDate = date("Y/m/d");
 
 // Function to calculate the final score
@@ -122,8 +124,8 @@ $inputData = [
     'Water' => $water,
     'StressLevels' => $stress,
     'SleepQuality' => $sleep,
-    'SmokingHabits' => 'NonSmoker',
-    'AlcoholConsumption' => 'RarelyOrNever',
+    'SmokingHabits' => $smoking,
+    'AlcoholConsumption' => $alcohol,
     'ExposureToEnvironmentalFactors' => $sunexposure,
     'ExistingSkincareProductUsage' => 'BasicProducts'
 ];
@@ -132,11 +134,11 @@ $inputData = [
 $finalScore = calculateFinalScore($inputData);
 
 // Determine skin condition based on the final score
-if ($finalScore >= 52 && $finalScore <= 67) {
+if ($finalScore >= 50 && $finalScore <= 67) {
     $skinCondition = 'Excellent skin condition';
-} elseif ($finalScore >= 47 && $finalScore <= 51) {
+} elseif ($finalScore >= 35 && $finalScore <= 49) {
     $skinCondition = 'Good skin condition';
-} elseif ($finalScore >= 22 && $finalScore <= 36) {
+} elseif ($finalScore >= 24 && $finalScore <= 34) {
     $skinCondition = 'Moderate skin condition';
 } else {
     $skinCondition = 'Needs attention; consider consulting a skincare professional or dermatologist for personalized advice.';
@@ -146,13 +148,13 @@ if ($finalScore >= 52 && $finalScore <= 67) {
 echo "Final Score: $finalScore\n";
 echo "Skin Condition: $skinCondition\n";
 
-$sql="INSERT INTO skinsurvey_input (age, email, skinType, menoPauseStage, sensitivity, hydration, sunscreen, diethabit, water, sleep , stress, sunexposure, surveyDate) 
-VALUES ('$age', '$email', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water', '$sleep' , '$stress', '$sunexposure', '$surveyDate')";
+$sql="INSERT INTO skinsurvey_input (age, email, skinType, menoPauseStage, sensitivity, hydration, sunscreen, diethabit, water, sleep , stress, sunexposure, smoking, alcohol surveyDate) 
+VALUES ('$age', '$email', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water', '$sleep' , '$stress', '$sunexposure','$smoking','$alcohol', '$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
 	// header('Location: surveythankyou.html');
 	header("Content-Type: text/plain");
-	header("Location: result.php?score=$finalScore&condition=".urlencode($skinCondition));
+	header("Location: result.html?score=$finalScore&condition=".urlencode($skinCondition));
 	echo "<script>
             function redirectToResult() {
                 var finalScore = '$finalScore';

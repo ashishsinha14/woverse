@@ -385,20 +385,17 @@
               <label class="label-head">Dietary Habits:</label>
               <div class="field-wrap">
                 <div class="radio-field">
-                  <input type="radio" name="diethabit"
-                    value="BalancedDiet" />
+                  <input type="radio" name="diethabit" value="BalancedDiet" />
                   <label class="op1" style="font-size: 12px !important;">Mostly: Balanced diet, antioxidant rich fruits
                     and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="diethabit"
-                    value="OccasionalIntake" />
+                  <input type="radio" name="diethabit" value="OccasionalIntake" />
                   <label class="op2" style="font-size: 12px !important;">Occasionally: Balanced diet, antioxidant rich
                     fruits and vegetables.</label>
                 </div>
                 <div class="delay-100ms radio-field">
-                  <input type="radio" name="diethabit"
-                    value="LimitedIntake" />
+                  <input type="radio" name="diethabit" value="LimitedIntake" />
                   <label class="op3" style="font-size: 12px !important;"> Rarely: Balanced diet, antioxidant rich fruits
                     and vegetables.</label>
                 </div>
@@ -542,11 +539,76 @@
             </div>
           </section>
 
+          <!-- Smoking -->
+          <section class="steps form-wrapper step-width">
+
+            <fieldset id="step12">
+              <label class="label-head">Do you smoke ?</label>
+              <div class="field-wrap">
+                <div class="radio-field">
+                  <input type="radio" name="smoking" value="NonSmoker" />
+                  <label class="op1">Non Smoker</label>
+                </div>
+                <div class="delay-100ms radio-field">
+                  <input type="radio" name="smoking" value="FormmerSmoker" />
+                  <label class="op2">Former Smoker</label>
+                </div>
+                <div class="delay-100ms radio-field">
+                  <input type="radio" name="smoking" value="CurrentlySmoking" />
+                  <label class="op3">Currently Smoking</label>
+                </div>
+
+
+                <div>
+                  <button type="button" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="next-prev" style="display: flex; text-align: center;margin-top: 20px;">
+              <button class="prev" type="button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+              </button>
+            </div>
+          </section>
+
+           <!-- Drinking -->
+           <section class="steps form-wrapper step-width">
+
+            <fieldset id="step13">
+              <label class="label-head">Consume Alcohol?</label>
+              <div class="field-wrap">
+                <div class="radio-field">
+                  <input type="radio" name="alcohol" value="RarelyOrNever" />
+                  <label class="op1">Rarely Or Never</label>
+                </div>
+                <div class="delay-100ms radio-field">
+                  <input type="radio" name="alcohol" value="Occasionally" />
+                  <label class="op2">Occasionally</label>
+                </div>
+                <div class="delay-100ms radio-field">
+                  <input type="radio" name="alcohol" value="Regularly" />
+                  <label class="op3">Regularly</label>
+                </div>
+
+
+                <div>
+                  <button type="button" class="mt-5 confirm" style="position: relative; left: 30%;">Ok</button>
+                </div>
+              </div>
+            </fieldset>
+            <div class="next-prev" style="display: flex; text-align: center;margin-top: 20px;">
+              <button class="prev" type="button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+              </button>
+            </div>
+          </section>
+
           <!-- Email -->
           <section class="steps form-wrapper step-width">
             <!-- step13 form  -->
-
-            <fieldset id="step12">
+            <fieldset id="step14">
               <label class="label-head">Email:</label>
               <div class="field-wrap">
                 <div class="inputField">
@@ -558,11 +620,9 @@
                 <button type="button" onclick="ValidateEmail()" class="mt-5 confirm"
                   style="position: relative; left: 30%;">Ok</button>
               </div>
+            </fieldset>
+          </section>
         </div>
-        </fieldset>
-        </section>
-
-      </div>
       </div>
     </form>
   </main>
@@ -584,7 +644,7 @@
     function selectMenopauseStage(stage) {
       document.getElementById("menoPauseStage").value = stage;
     }
-    
+
   </script>
 </body>
 
