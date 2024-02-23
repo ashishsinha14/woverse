@@ -148,7 +148,7 @@ if ($finalScore >= 50 && $finalScore <= 67) {
 echo "Final Score: $finalScore\n";
 echo "Skin Condition: $skinCondition\n";
 
-$sql="INSERT INTO skinsurvey_input (age, email, skinType, menoPauseStage, sensitivity, hydration, sunscreen, diethabit, water, sleep , stress, sunexposure, smoking, alcohol surveyDate) 
+$sql="INSERT INTO skinsurvey_input (age, email, skinType, menoPauseStage, sensitivity, hydration, sunscreen, diethabit, water, sleep , stress, sunexposure, smoking, alcohol, surveyDate) 
 VALUES ('$age', '$email', '$skinType', '$menoPauseStage','$sensitivity','$hydration','$sunscreen','$diethabit','$water', '$sleep' , '$stress', '$sunexposure','$smoking','$alcohol', '$surveyDate')";
 if (mysqli_query($conn, $sql)) {
 	// echo "New record created successfully";
