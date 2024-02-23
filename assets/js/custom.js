@@ -218,8 +218,24 @@ $(document).ready(function () {
     }, 400);
   });
 
-
   $("#step12 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+  $("#step13 .confirm").on("click", function () {
+    $(".confirm").addClass("active");
+    setTimeout(function () {
+      next();
+      $(".confirm").removeClass("active");
+    }, 400);
+  });
+
+
+  $("#step14 .confirm").on("click", function () {
     if (ValidateEmail(document.getElementById('email')) === false) {
       $("#error").append(
         '<div class="reveal alert alert-danger">Please enter a valid email!</div>'
