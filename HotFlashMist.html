@@ -26,6 +26,7 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="css/productstyle.css" rel="stylesheet">
@@ -230,36 +231,48 @@
             will-change: max-height;
             max-height: 80px;
         }
+
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .slide-container {
+            position: relative;
+            display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
     </style>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body>
-
-    <!-- preloader -->
-    <div id="preloader">
-        <div class="book">
-            <div class="inner">
-                <div class="left"></div>
-                <div class="middle"></div>
-                <div class="right"></div>
-            </div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </div>
 
     <!-- site wrapper -->
     <div class="site-wrapper">
@@ -268,7 +281,7 @@
 
         <!-- header -->
         <header id="header" class="fixed-top ">
-            <div class="container-fluid">
+            <div class="container-fluid gradient-pp">
 
                 <div class="row justify-content-center" style="background-color: darkmagenta;">
                     <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
@@ -317,8 +330,42 @@
                                     <div class="text-center">
                                         <h2 class="fw-bold text-uppercase" style="font-size: 20px;">Cooling Mist For Hot
                                             Flashes Designed For Peri-Post Menopausal Skin</h2>
-                                        <img src="img/Mist.jpeg">
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Introducing our India's First Mist For Hot Flashes! Crafted with cutting-edge
+                                            ingredients from biotechnology research, it's packed with antioxidants,
+                                            peptides, and botanicals.
+                                            </br>
+                                            Feel Confident: Embrace your beauty journey with confidence! Our Mist helps
+                                            you feel comfortable and beautiful, tackling hot flashes. Specifically made
+                                            for menopausal skin, it hydrates, improves texture, and reduces puffiness.
+                                            </br>
+                                            A definitive solution for menopause-related skin issues, delivering visible
+                                            results.
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column">
+                                            <img src="img/Mist.jpeg" style="width:100%" onclick="myFunction(this);">
+                                        </div>
+                                        <div class="column">
+                                            <img src="img/calm1.jpeg" style="width:100%" onclick="myFunction(this);">
+                                        </div>
+                                        <div class="column">
+                                            <img src="img/calm2.jpeg" style="width:100%" onclick="myFunction(this);">
+                                        </div>
+                                        <div class="column">
+                                            <img src="img/calm3.jpeg" style="width:100%" onclick="myFunction(this);">
+                                        </div>
+                                    </div>
 
+                                    <div class="slide-container">
+                                        <img id="expandedImg" style="width:100%">
+                                        <div id="imgtext"></div>
+                                    </div>
+                                    <div class="text-center" id="landing-img">
+                                        <img src="img/Mist.jpeg">
                                     </div>
                                     <div class="row g-5 align-items-center">
                                         <div class="col-lg-12 wow fadeIn" data-wow-delay="0.1s">
@@ -330,39 +377,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <p>Introducing our groundbreaking <strong>India First Mist For Hot
-                                                Flashes,</strong> meticulously
-                                            crafted
-                                            with cutting-edge, <strong>award-winning ingredients derived from years of
-                                                intensive
-                                                research in biotechnology.</strong> Infused with potent antioxidants,
-                                            collagen-boosting peptides, and nourishing botanicals, <strong>
-                                                <p>
-                                                    <strong>Age with Confidence:</strong> Embrace your unique beauty
-                                                    journey
-                                                    with
-                                                    confidence! Our Hot Flash Mist empowers you to feel comfortable and
-                                                    beautiful in your skin, embracing the wisdom that comes with aging.
-                                                    <br>
-                                                    It aids in alleviating hot flashes. Moreover, this mist is specially
-                                                    crafted for
-                                                    menopausal skin, providing gentle care for maturing skin. It
-                                                    delivers hydration,
-                                                    moisture, improves texture, enhances elasticity, and reduces
-                                                    puffiness
-                                                    <br>
-                                                </p>
-                                                <br>
-                                        </p>
-                                        <p><strong>A definitive solution for skin issues related to menopause,
-                                                guaranteeing unparalleled effectiveness and visible results.</strong>
-                                        </p>
-                                    </div>
+
                                 </div>
                             </div>
-
-
                             <ul class="cards1">
                                 <li class="cards__item">
                                     <div class="card1">
@@ -410,11 +427,6 @@
                     </div>
                 </div>
                 <!-- Deal End -->
-
-
-
-
-
                 <!-- How To Use Start -->
                 <div class="container-fluid how-to-use my-3 py-3">
                     <div class="container text-white">
@@ -625,26 +637,17 @@
                                                     </span>
                                                 </label>
                                             </div>
-
                                             <div class="faq-accordion-content">
                                                 <p> No, the Cooling Mist will not stain clothing..</p>
                                             </div>
-
                                         </article> <!-- faq accordion -->
-
                                     </div> <!-- faq articles -->
-
                                 </main> <!-- faq -->
-
                             </div> <!-- faq card -->
-
                         </div> <!-- card wrapper -->
                     </div>
                 </div>
                 <!-- How To Use End -->
-
-
-
             </div>
     </div>
     </section>
@@ -673,8 +676,16 @@
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.sticky-sidebar.min.js"></script>
     <script src="js/custom.js"></script>
-
-
+    <script>
+        function myFunction(imgs) {
+            document.getElementById("landing-img").style.display = "none"
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+    </script>
 </body>
 
 </html>

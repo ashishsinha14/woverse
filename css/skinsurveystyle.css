@@ -218,6 +218,18 @@ header h1 {
 #step11 .label-head::before {
   content: "11";
 }
+#step12 .label-head::before {
+  content: "12";
+}
+#step13 .label-head::before {
+  content: "13";
+}
+#step14 .label-head::before {
+  content: "14";
+}
+#step15 .label-head::before {
+  content: "15";
+}
 
 .select-field {
   width: 100%;

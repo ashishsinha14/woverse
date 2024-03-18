@@ -1,17 +1,306 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
     <title>Skin Condition Result</title>
+
     <style>
-        
+       
+        :root {
+            --col_red: hsl(0, 100%, 67%);
+            --col_yellow: hsl(39, 100%, 56%);
+            --col_teal: hsl(166, 100%, 37%);
+            --col_blue: hsl(234, 85%, 45%);
+            --col_white: hsl(0, 0%, 100%);
+            --col_black: hsl(0, 0%, 0%);
+            --col_pale: hsl(221, 100%, 96%);
+            --col_lavender: hsl(241, 100%, 89%);
+            --col_gray: hsl(224, 30%, 27%);
+            --col_red_a: hsla(0, 100%, 67%, 0.05);
+            --col_yellow_a: hsla(39, 100%, 56%, 0.05);
+            --col_teal_a: hsla(166, 100%, 37%, 0.05);
+            --col_blue_a: hsla(234, 85%, 45%, 0.05);
+            --panel-top-gutter: 2.4rem;
+            --panel-hdr-weight: 500;
+            --panel-bg-grad: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            min-height: 512px;
+            height: 100%;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-weight: 400;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 1.125rem;
+            margin: 0;
+        }
+
+        main {
+            align-items: flex-start;
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            /* necessary for vertically centering the content */
+        }
+
+        #results-panel {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            background-color: var(--col_white);
+        }
+
+        #results-panel .summary {
+            min-width: 368px;
+            background-image: var(--panel-bg-grad);
+            border-radius: 0 0 2rem 2rem;
+            color: var(--col_lavender);
+        }
+
+        .summary h1 {
+            font-size: 1.00rem;
+            font-weight: var(--panel-hdr-weight);
+            margin-bottom: 0.2rem;
+            color: white;
+        }
+
+        .summary .score-box {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 1.6rem;
+            background-image: linear-gradient(hsla(256, 72%, 46%, 1),
+                    hsla(241, 72%, 46%, 0));
+        }
+
+        .summary .score-box .score-value {
+            font-size: 2.5rem;
+            color: var(--col_white);
+            font-weight: 800;
+            top: 25px;
+            left: 30px;
+            position: relative;
+        }
+
+        .summary .score-box .score-max {
+            font-size: 1rem;
+            position: relative;
+            top: 50px;
+            right: 22px;
+        }
+
+        .summary .score-grade {
+            font-size: 1.75rem;
+            font-weight: 500;
+            color: var(--col_white);
+            margin-bottom: 1.1rem;
+        }
+
+        .summary .score-rank {
+            padding: 0 1rem;
+            font-size: larger;
+            color: white;
+        }
+
+        #results-panel .details {
+            width: 100%;
+            height: 100%;
+            text-align: left;
+        }
+
+        #results-panel .details h2 {
+            font-size: 1.35rem;
+            margin-bottom: 2.3rem;
+            font-weight: var(--panel-hdr-weight);
+        }
+
+        #results-panel .details p {
+            padding: 0.9rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.1rem;
+        }
+
+        #results-panel .details p span {
+            display: inline-block;
+            text-align: right;
+        }
+
+        #results-panel .details p .category {
+            width: 9.3rem;
+            text-align: left;
+            margin-left: 1.7rem;
+        }
+
+        #results-panel .details p .value {
+            width: 1.4rem;
+            text-align: center;
+            color: var(--col_black);
+        }
+
+        #results-panel .details p .score.max {
+            width: 2.5rem;
+            color: hsla(0, 0%, 0%, 0.35);
+        }
+
+        #results-panel .details .reaction {
+            background: var(--col_red_a) url("./assets/images/icon-reaction.svg") no-repeat 1em center;
+            color: var(--col_red);
+        }
+
+        #results-panel .details .memory {
+            background: var(--col_yellow_a) url("./assets/images/icon-memory.svg") no-repeat 1em center;
+            color: var(--col_yellow);
+        }
+
+        #results-panel .details .verbal {
+            background: var(--col_teal_a) url("./assets/images/icon-verbal.svg") no-repeat 1em center;
+            color: var(--col_teal);
+        }
+
+        #results-panel .details .visual {
+            background: var(--col_blue_a) url("./assets/images/icon-visual.svg") no-repeat 1em center;
+            color: var(--col_blue);
+        }
+
+        button {
+            background-color: var(--col_gray);
+            border-radius: 2rem;
+            color: var(--col_white);
+            border: none;
+            width: 100%;
+            margin-top: 1.4rem;
+            padding: 0.9rem;
+            font-size: 1rem;
+        }
+
+        button:active {
+            background-image: var(--panel-bg-grad);
+            cursor: pointer;
+        }
+
+        footer {
+            margin: 2vh auto;
+        }
+
+        footer .attribution {
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        footer .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+        @media only screen and (min-width: 736px) {
+            main {
+                align-items: center;
+                justify-content: center;
+            }
+
+            #results-panel {
+                width: 736px;
+                height: 512px;
+                flex-direction: row;
+                border-radius: 2rem;
+            }
+
+            #results-panel .summary {
+                height: 100%;
+                border-radius: 2rem;
+            }
+
+            #results-panel .summary .score-box {
+                width: 200px;
+                height: 200px;
+            }
+
+            #results-panel .summary .score-box .score-value {
+                top: 60px;
+                left: 30px;
+            }
+
+            #results-panel .summary .score-box .score-max {
+                top: 90px;
+                right: 44px;
+            }
+
+            #results-panel .summary div,
+            #results-panel .details div {
+                padding: var(--panel-top-gutter) 2.2rem;
+            }
+
+            #results-panel .details p .category {
+                width: 8.2rem;
+            }
+
+            #results-panel .details p .value {
+                width: 1.4rem;
+            }
+
+            #results-panel .details p .score.max {
+                width: 2.6rem;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h2>Skin Condition Result</h2>
-    <div id="finalScore"></div>
-    <div id="skinCondition"></div>
+    <main aria-roledescription="This contains the actual solution to the challenge">
+        <div id="results-panel">
+            <section class="summary">
+                <div>
+                    <h1>Your Skin Condition</h1>
+                    <p class="score-box">
+                        <span id="finalScore" class="score-value"></span>
+                        <span class="score-max">of 50</span>
+                    </p>
+                    <p id="skinCondition" class="score-rank">
+
+                    </p>
+                </div>
+            </section>
+            <section class="details">
+                <div style="font-size: 16px;">
+                    <ul>
+                        <li>Neglecting your skin accelerates the aging process, leading to a tired and aged appearance.
+                        </li>
+                        <li style="padding-top: 5px;">Without proper care, wrinkles deepen, fine lines become more pronounced, and skin loses its
+                            youthful glow.</li>
+                        <li style="padding-top: 5px;">Neglected skin lacks vitality and firmness, contributing to sagging, including the
+                            development of jowls around the jawline.</li>
+                        <li style="padding-top: 5px;">Reduced collagen and elastin levels further exacerbate sagging and loss of facial volume.
+                        </li>
+                        <li style="padding-top: 5px;">Dryness, rough texture, and uneven skin tone are also common symptoms of aging skin.</li>
+                    </ul>
+
+                    <button onclick="location.href='result.html'" type="button" accesskey="c" value="Continue">Need Help?</button>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <script>
         // Function to get URL parameter by name
@@ -27,77 +316,9 @@
         var skinCondition = getUrlParameter('condition');
 
         // Display values on the page
-        document.getElementById('finalScore').innerHTML = 'Final Score: ' + finalScore;
-        document.getElementById('skinCondition').innerHTML = 'Skin Condition: ' + skinCondition;
+        document.getElementById('finalScore').innerHTML = "34"; // finalScore;
+        document.getElementById('skinCondition').innerHTML = "Needs attention"; //skinCondition;
     </script>
 </body>
-</html> -->
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <title>Skin Condition Result</title>
-  </head>
-    <style>
-      body {
-        text-align: center;
-        padding: 40px 0;
-        background: #EBF0F5;
-      }
-        h1 {
-          color: #88B04B;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-weight: 900;
-          font-size: 40px;
-          margin-bottom: 10px;
-        }
-        p {
-          color: #404F5E;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-size:20px;
-          margin: 0;
-        }
-      i {
-        color: #9ABC66;
-        font-size: 100px;
-        line-height: 200px;
-        margin-left:-15px;
-      }
-      .card {
-        background: white;
-        padding: 60px;
-        border-radius: 4px;
-        box-shadow: 0 2px 3px #C8D0D8;
-        display: inline-block;
-        margin: 0 auto;
-      }
-    </style>
-    <body>
-      <div class="card">
-      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i class="checkmark">✓</i>
-      </div>
-        <h1 id="finalScore"></h1> 
-        <p id="skinCondition"></p>
-      </div>
-
-      <script>
-        // Function to get URL parameter by name
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
-
-        // Read values from URL parameters
-        var finalScore = getUrlParameter('score');
-        var skinCondition = getUrlParameter('condition');
-
-        // Display values on the page
-        document.getElementById('finalScore').innerHTML = 'Final Score: ' + finalScore;
-        document.getElementById('skinCondition').innerHTML = 'Skin Condition: ' + skinCondition;
-    </script>
-    </body>
 </html>
